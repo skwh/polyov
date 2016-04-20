@@ -13,3 +13,20 @@
  *= require_tree .
  *= require_self
  */
+
+$backgrey:#DEDEDE;
+
+$mainblue:#0047AB;
+
+body {
+  margin:3%;
+  padding:0;
+  background-color:$backgrey;
+  color:black;
+  text-align:center;
+}
+
+h1 {
+  color:$mainblue;
+  margin-top:8%;
+}
