@@ -1,4 +1,10 @@
-<%= image_tag "polyov.png" %>
-<%= content_tag :h1 do %>
-UNDER CONSTRUCTION
+<% @projects.each do |p| %>
+  <%= content_tag :div, class:"project-box" do %>
+    <%= content_tag :h1, class:"project-title" do %>
+      <%= p.title %>
+    <% end %>
+    <%= content_tag :h3, class:"project-subtitle" do %>
+      <%= p.subtitle %>
+    <% end %>
+  <% end %>
 <% end %>

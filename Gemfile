@@ -28,6 +28,7 @@ gem 'spring',        group: :development
 # Use unicorn as the app server
 # gem 'unicorn'
 
+gem 'forgery', '0.6.0'
 gem 'devise'
 gem 'redcarpet'
 gem 'will_paginate', '~> 3.0.6'

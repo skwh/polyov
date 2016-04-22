@@ -14,7 +14,9 @@
  *= require_self
  */
 
-$backgrey:#DEDEDE;
+$backgrey:rgb(237, 237, 237);
+
+$darkgrey:rgb(129, 129, 130);
 
 $mainblue:#0047AB;
 
@@ -24,9 +26,20 @@ body {
   background-color:$backgrey;
   color:black;
   text-align:center;
+  font-family:sans-serif;
+}
+
+a {
+  color:$darkgrey;
+  text-decoration: none;
+  font-weight:bold;
 }
 
 h1 {
   color:$mainblue;
   margin-top:8%;
+}
+
+#header-image {
+  width:45%;
 }
