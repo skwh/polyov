@@ -1,7 +1,7 @@
 <% @projects.each do |p| %>
   <%= content_tag :div, class:"project-box" do %>
     <%= content_tag :h1, class:"project-title" do %>
-      <%= p.title %>
+      <%= link_to p.title, p %>
     <% end %>
     <%= content_tag :h3, class:"project-subtitle" do %>
       <%= p.subtitle %>

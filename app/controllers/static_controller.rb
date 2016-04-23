@@ -5,4 +5,9 @@ class StaticController < ApplicationController
 
   def about
   end
+
+  def panel
+    @projects = Project.all
+    @posts = Post.all
+  end
 end

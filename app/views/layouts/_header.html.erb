@@ -1,7 +1,8 @@
 <%= link_to root_path do %>
-  <%= image_tag "polyov.png", id:"header-image" %>
+  <%= image_tag "polyov.png", id:"header-image", class:homepage_size %>
 <% end %>
 <div id="nav">
-  <%= link_to about_path, "About" %>
-  <%= link_to blog_path, "Blog" %>
+  <%= link_to "About", about_path, class:current_tab("static", "about", false) %>
+  <%= link_to "Portfolio", root_path, class:current_tab("static", "index", false) %>
+  <%= link_to "Blog", posts_path, class:current_tab("posts", "index", true) %>
 </div>

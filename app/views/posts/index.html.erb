@@ -1,0 +1,5 @@
+<% @posts.each do |p| %>
+  <%= content_tag :h2, p.title %>
+  <%= content_tag :p, p.body %>
+  <hr />
+<% end %>
