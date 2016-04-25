@@ -1,5 +1,11 @@
+<% if admin_signed_in? %>
+  <%= link_to "New Post", new_post_path %>
+<% end %>
 <% @posts.each do |p| %>
   <%= content_tag :h2, p.title %>
   <%= content_tag :p, p.body %>
+  <% if admin_signed_in? %>
+    <%= link_to "Edit Post", edit_post_path(p) %>
+  <% end %>
   <hr />
 <% end %>

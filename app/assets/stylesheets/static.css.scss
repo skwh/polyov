@@ -14,7 +14,6 @@ body {
   padding:0;
   background-color:$backgrey;
   color:black;
-  text-align:center;
   font-family:sans-serif;
 }
 
@@ -26,11 +25,11 @@ a {
 
 h1 {
   color:$mainblue;
-  margin-top:8%;
   font-family: "Prototype", sans-serif;
 }
 
 .project-box {
+  text-align: center;
   width:45%;
   padding:2%;
   float:left;
