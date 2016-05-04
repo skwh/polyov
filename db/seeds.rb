@@ -6,7 +6,7 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 10.times do
-  Project.create(title:Forgery(:lorem_ipsum).words(rand(1..5)),subtitle:Forgery(:lorem_ipsum).title,description:Forgery(:lorem_ipsum).paragraphs(3))
+  Project.create(title:Forgery(:lorem_ipsum).words(rand(1..5)),subtitle:Forgery(:lorem_ipsum).title,description:Forgery(:lorem_ipsum).paragraphs(3),site_url:"http://example.com")
 end
 
 20.times do

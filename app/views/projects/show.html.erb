@@ -1,6 +1,8 @@
 <%= content_tag :div, class:"project" do %>
   <%= content_tag :h1, @project.title, class:"project-title" %>
-  <%= content_tag :h3, @project.subtitle, class:"project-subtitle" %>
+  <%= content_tag :h3, class:"project-subtitle" do %>
+    <%= link_to @project.subtitle, @project.site_url %>
+  <% end %>
   <%= content_tag :div, class:"project-description" do %>
     <%= @project.description.html_safe %>
   <% end %>

@@ -28,4 +28,7 @@ $subtitlegrey:rgb(66, 66, 66);
   color:$subtitlegrey;
   font-size:1.5vw;
   font-family:"Couture", "DIN Condensed", sans-serif;
+  a:hover {
+    text-decoration: underline;
+  }
 }

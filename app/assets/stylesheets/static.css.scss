@@ -9,6 +9,8 @@ $greyblue:#2e486e;
 
 $mainblue:#0047AB;
 
+$highlightgrey:rgba(209, 209, 209, 0.8);
+
 body {
   margin:3%;
   padding:0;
@@ -33,6 +35,10 @@ h1 {
   width:45%;
   padding:2%;
   float:left;
+  transition: background-color 0.5s;
+  &:hover {
+    background-color:$highlightgrey;
+  }
 }
 
 .project-title {
