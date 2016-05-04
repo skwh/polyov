@@ -61,6 +61,7 @@ input {
 
 #header {
   text-align:center;
+  margin-bottom:1%;
 }
 
 #nav {
@@ -76,4 +77,10 @@ input {
       background-color:$highlightgrey;
     }
   }
+}
+
+#nav-wrapper {
+  width:auto;
+  position:relative;
+  left:-1%;
 }
