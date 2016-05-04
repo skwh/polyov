@@ -6,9 +6,9 @@ module ApplicationHelper
       "Polyov | #{title}"
     end
   end
-  
+
   def current_tab(controller, page, all_pages)
-    if (all_pages and controller === controller_name) or (page === action_name and controller === controller_name)
+    if (all_pages and controller === controller_name) or (page === action_name and controller === controller_name) or (controller_name == "static" and controller == "projects" and action_name == "index" and page == "index")
       "current-tab"
     else
       controller_name

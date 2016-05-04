@@ -23,6 +23,11 @@ $greyblue:#2e486e;
 $mainblue:#0047AB;
 
 @font-face {
+  font-family:Couture;
+  src:asset-url("couture-bld.otf");
+}
+
+@font-face {
  font-family:Prototype;
  src:asset-url("Prototype.ttf");
 }
@@ -38,6 +43,16 @@ img.large {
 
 img.small {
   width:40%;
+}
+
+form {
+  font-size:1.5vw;
+}
+
+input {
+  width:50%;
+  margin:1%;
+  font-size:1.5vw;
 }
 
 .current-tab {

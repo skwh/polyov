@@ -1,3 +1,7 @@
-<%= content_tag :h1, @project.title, class:"project-title" %>
-<%= content_tag :h3, @project.subtitle, class:"project-subtitle" %>
-<%= content_tag :p, @project.description, class:"project-description" %>
+<%= content_tag :div, class:"project" do %>
+  <%= content_tag :h1, @project.title, class:"project-title" %>
+  <%= content_tag :h3, @project.subtitle, class:"project-subtitle" %>
+  <%= content_tag :div, class:"project-description" do %>
+    <%= @project.description.html_safe %>
+  <% end %>
+<% end %>

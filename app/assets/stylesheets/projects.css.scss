@@ -1,3 +1,31 @@
 // Place all the styles related to the projects controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+$backgrey:rgb(237, 237, 237);
+
+$highlightgrey:rgba(209, 209, 209, 0.8);
+
+$greyblue:#2e486e;
+
+$mainblue:#0047AB;
+
+$subtitlegrey:rgb(66, 66, 66);
+
+.project {
+  width:75%;
+  margin:auto;
+  text-align: center;
+}
+
+.project-title {
+  font-family:"Prototype", "Helvetica", sans-serif;
+  margin-bottom:0.5vh;
+}
+
+.project-subtitle {
+  margin-top:0.5vh;
+  color:$subtitlegrey;
+  font-size:1.5vw;
+  font-family:"Couture", "DIN Condensed", sans-serif;
+}

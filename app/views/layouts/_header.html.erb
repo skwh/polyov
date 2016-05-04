@@ -1,10 +1,10 @@
 <%= content_tag :div, id:"header" do %>
   <%= link_to root_path do %>
-    <%= image_tag "polyov.png", id:"header-image", class:homepage_size %>
+    <%= image_tag "polyov.png", id:"header-image", class:"large" %>
   <% end %>
   <div id="nav">
     <%= link_to "About", about_path, class:current_tab("static", "about", false) %>
-    <%= link_to "Portfolio", root_path, class:current_tab("static", "index", false) %>
+    <%= link_to "Portfolio", root_path, class:current_tab("projects", "index", true) %>
     <%= link_to "Blog", posts_path, class:current_tab("posts", "index", true) %>
   </div>
 <% end %>
