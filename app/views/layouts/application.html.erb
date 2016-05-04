@@ -9,5 +9,8 @@
 <body>
   <%= render 'layouts/header' %>
   <%= yield %>
+  <% if admin_signed_in? %>
+    Signed in
+  <% end %>
 </body>
 </html>

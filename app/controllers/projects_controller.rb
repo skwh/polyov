@@ -1,11 +1,11 @@
 class ProjectsController < ApplicationController
   before_action :set_project, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate_admin, only: [:edit, :update, :destroy, :new, :create]
+  before_action :authenticate_admin!, only: [:edit, :update, :destroy, :new, :create]
 
   respond_to :html
 
   def index
-    @projects = Project.all
+    @projects = Project.all.order(created_at: :desc)
     respond_with(@projects)
   end
 
