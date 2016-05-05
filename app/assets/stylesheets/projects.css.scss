@@ -24,11 +24,32 @@ $subtitlegrey:rgb(66, 66, 66);
 }
 
 .project-subtitle {
-  margin-top:0.5vh;
-  color:$subtitlegrey;
-  font-size:1.5vw;
-  font-family:"Couture", "DIN Condensed", sans-serif;
-  a:hover {
-    text-decoration: underline;
+  padding:1%;
+  text-transform: uppercase;
+  // color:$mainblue;
+  font-family: "Avenir", "Prototype", sans-serif;
+  display:inline-block;
+  border-radius:2px;
+  transition: background-color 0.5s;
+  margin-bottom: 1%;
+  a {
+    color:$greyblue;
+  }
+  &:hover {
+    background-color:$highlightgrey;
+  }
+}
+
+.project-description {
+  margin:1%;
+  margin-top:-1%;
+  p {
+    line-height: 5vh;
+  }
+  a {
+    color:$mainblue;
+    &:hover {
+      text-decoration: underline;
+    }
   }
 }

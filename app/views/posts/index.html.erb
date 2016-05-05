@@ -1,16 +1,25 @@
-<% if admin_signed_in? %>
-  <%= link_to "New Post", new_post_path %>
-<% end %>
-<% @posts.each do |p| %>
-  <%= content_tag :h2 do %>
-    <%= p.title %>
-    <%= content_tag :span, class:"post-time" do %>
-      -<%= p.updated_at.strftime('%b %e %Y') %>
-    <% end %>
-  <% end %>
-  <%= content_tag :p, p.body %>
+<% provide(:title, "Blog") %>
+<div id="body-wrapper">
   <% if admin_signed_in? %>
-    <%= link_to "Edit Post", edit_post_path(p) %>
+    <%= link_to "New Post", new_post_path %>
   <% end %>
-  <hr />
-<% end %>
+  <% @posts.each do |p| %>
+    <%= content_tag :div, class:"post" do %>
+      <%= content_tag :h2, class:"post-title" do %>
+        <%= link_to p.title, p, class:"post-link" %>
+        <%= content_tag :span, class:"post-time" do %>
+          -<%= p.updated_at.strftime('%b %e %Y') %>
+        <% end %>
+      <% end %>
+      <%= content_tag :div, class:"post-body" do %>
+        <%= limit_length(p.body,125).html_safe %><br />
+        <%= link_to "Read More", p, class:"right" %>
+      <% end %>
+      <% if admin_signed_in? %>
+        <%= link_to "Edit Post", edit_post_path(p) %>
+      <% end %>
+      <hr />
+      <% end %>
+  <% end %>
+  <%= will_paginate(@posts) %>
+</div>

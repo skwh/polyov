@@ -1,6 +1,6 @@
 class StaticController < ApplicationController
   def index
-    @projects = Project.all.order(created_at: :desc).limit(6)
+    @projects = Project.all.order(created_at: :desc).paginate(:page => params[:page], :per_page => 6)
   end
 
   def about

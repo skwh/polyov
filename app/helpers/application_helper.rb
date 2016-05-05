@@ -22,4 +22,8 @@ module ApplicationHelper
       "small"
     end
   end
+
+  def limit_length(text, words)
+    text.split(" ").slice(0,words).join(" ") << "..."
+  end
 end

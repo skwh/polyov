@@ -7,3 +7,46 @@ $backgrey:rgb(237, 237, 237);
 $darkgrey:rgb(129, 129, 130);
 
 $mainblue:#0047AB;
+
+#body-wrapper {
+  width:75%;
+  margin:auto;
+  padding-top:1%;
+}
+.post hr {
+  clear:both;
+}
+h1.post-title {
+  font-size:2vw;
+}
+.post-title {
+  margin-top:4%;
+  font-family:"Couture", "DIN Condensed", sans-serif;
+  font-size:1.5vw;
+}
+.post-link {
+  color:$mainblue;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+h3.post-time {
+  font-family:"Couture", "DIN Condensed", sans-serif;
+  margin-top:1%;
+  font-size:1.2vw;
+}
+.post-time {
+  font-size:1vw;
+  color:$darkgrey;
+}
+.post-body {
+  margin:1%;
+  line-height: 5vh;
+
+  a {
+    color:$mainblue;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

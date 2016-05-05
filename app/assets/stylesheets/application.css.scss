@@ -59,6 +59,44 @@ input {
   background-color:$highlightgrey;
 }
 
+.centered {
+  text-align:center;
+}
+
+.right {
+  float:right;
+}
+
+.pagination {
+  clear:both;
+  text-align: center;
+  margin-top:3%;
+  * {
+    padding:1%;
+    text-transform: uppercase;
+    color:$mainblue;
+    font-family: "Avenir", "Prototype", sans-serif;
+    display:inline-block;
+    border-radius:2px;
+    &:hover {
+      background-color:$highlightgrey;
+    }
+  }
+  a {
+    color:$mainblue;
+  }
+  a.next_page, a.previous_page {
+    font-weight:normal;
+  }
+  em {
+    font-style:normal;
+    color:black;
+    &:hover {
+      background-color:$backgrey;
+    }
+  }
+}
+
 #header {
   text-align:center;
   margin-bottom:1%;
