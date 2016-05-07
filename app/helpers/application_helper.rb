@@ -7,6 +7,15 @@ module ApplicationHelper
     end
   end
 
+  def default_meta_tags
+		{
+			title: "Polyov",
+			description: "Web & UI Design, Development",
+			keywords: "Web Design, Web Development, UX Design, UI Design, Ruby on Rails, Ruby, Javascript",
+			separator: ","
+		}
+	end
+
   def current_tab(controller, page, all_pages)
     if (all_pages and controller === controller_name) or (page === action_name and controller === controller_name) or (controller_name == "static" and controller == "projects" and action_name == "index" and page == "index")
       "current-tab"

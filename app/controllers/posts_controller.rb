@@ -10,6 +10,20 @@ class PostsController < ApplicationController
   end
 
   def show
+    set_meta_tags title: @post.title,
+                  description: limit_length(@post.body,50).html_safe,
+                  author: "Evan Derby",
+                  publisher: "Polyov",
+                  og: {
+                    title: @post.title,
+                    type: "article",
+                    site_name: "Polyov",
+                    description: limit_length(@post.body,50).html_safe,
+                    url: "http://www.polyov.com/posts/#{@post.slug}"
+                  },
+                  article: {
+                    author: "Evan Derby"
+                  }
     respond_with(@post)
   end
 

@@ -10,6 +10,10 @@ class ProjectsController < ApplicationController
   end
 
   def show
+    set_meta_tags title: @project.title,
+                  description: limit_length(@project.body,50).html_safe,
+                  author: "Evan Derby",
+                  publisher: "Polyov"
     respond_with(@project)
   end
 
