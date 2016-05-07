@@ -1,7 +1,7 @@
 <% provide(:title, @project.title) %>
 <%= content_tag :div, class:"project" do %>
   <%= content_tag :h1, @project.title, class:"project-title" %>
-  <%= content_tag :h3, class:"project-subtitle" do %>
+  <%= content_tag :h2, class:"project-subtitle" do %>
     <%= link_to @project.subtitle, @project.site_url %>
   <% end %>
   <%= content_tag :div, class:"project-description" do %>

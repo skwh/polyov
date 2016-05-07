@@ -23,7 +23,8 @@ $subtitlegrey:rgb(66, 66, 66);
   margin-bottom:0.5vh;
 }
 
-.project-subtitle {
+
+h2.project-subtitle {
   padding:1%;
   text-transform: uppercase;
   // color:$mainblue;
@@ -40,12 +41,25 @@ $subtitlegrey:rgb(66, 66, 66);
   }
 }
 
+h3.project-subtitle {
+  padding:1%;
+  text-transform: uppercase;
+  color:$greyblue;
+  font-family: "Avenir", "Prototype", sans-serif;
+  display:inline-block;
+  border-radius:2px;
+  transition: background-color 0.5s;
+  margin-bottom: 1%;
+  margin-top: -1%;
+  a {
+    color:$greyblue;
+  }
+}
+
+
 .project-description {
   margin:1%;
-  margin-top:-1%;
-  p {
-    line-height: 5vh;
-  }
+  line-height: 5vh;
   a {
     color:$mainblue;
     &:hover {

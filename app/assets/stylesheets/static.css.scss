@@ -32,12 +32,17 @@ h1 {
 
 .project-box {
   text-align: center;
-  width:45%;
+  width:42%;
   padding:2%;
   float:left;
-  transition: background-color 0.5s;
+  background-color:rgba(209, 209, 209, 0.2);
+  margin:1%;
+  // border-left:3px solid $mainblue;
+  transition: background-color 0.5s, border-color 0.2s;
+  border: 3px solid rgba(255, 255, 255, 0);
   &:hover {
     background-color:$highlightgrey;
+    border-left: 3px solid $mainblue;
   }
 }
 
@@ -47,6 +52,45 @@ h1 {
     color:$mainblue;
     &:hover {
       color:$greyblue;
+    }
+  }
+}
+
+.static-header {
+  font-size:3vw;
+  margin-bottom:0;
+  margin-top:0;
+}
+
+.static-subheader {
+  font-family:"Couture", "DIN Condensed", sans-serif;
+  color:$darkgrey;
+  margin-top:1%;
+}
+
+.static-body {
+  margin-bottom:3%;
+}
+
+.static-subsubheader {
+  font-family:"Couture", "DIN Condensed", sans-serif;
+  color:$darkgrey;
+  margin-bottom:0;
+}
+
+.static-links {
+  margin-top:0;
+  a {
+    padding:1%;
+    text-transform: uppercase;
+    color:$mainblue;
+    font-family: "Avenir", "Prototype", sans-serif;
+    font-size:1vw;
+    display:inline-block;
+    border-radius:2px;
+    transition: background-color 0.5s;
+    &:hover {
+      background-color:$highlightgrey;
     }
   }
 }

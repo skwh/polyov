@@ -32,6 +32,16 @@ $mainblue:#0047AB;
  src:asset-url("Prototype.ttf");
 }
 
+@font-face {
+  font-family:Kozuka;
+  src:asset-url("Kozuka_Gothic_Pro_L.otf");
+}
+
+p {
+  font-family:"Kozuka Gothic Pro", "Kozuka", "Optima", sans-serif;
+  // font-weight:bold;
+}
+
 img#header-image {
   transition: width 1s;
   -webkit-transition: width 1s;
@@ -111,6 +121,7 @@ input {
     font-family: "Avenir", "Prototype", sans-serif;
     display:inline-block;
     border-radius:2px;
+    transition: background-color 0.5s;
     &:hover {
       background-color:$highlightgrey;
     }

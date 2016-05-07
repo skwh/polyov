@@ -8,18 +8,18 @@
       <%= content_tag :h2, class:"post-title" do %>
         <%= link_to p.title, p, class:"post-link" %>
         <%= content_tag :span, class:"post-time" do %>
-          -<%= p.updated_at.strftime('%b %e %Y') %>
+          - <%= p.updated_at.strftime('%b %e %Y') %>
         <% end %>
       <% end %>
       <%= content_tag :div, class:"post-body" do %>
-        <%= limit_length(p.body,125).html_safe %><br />
-        <%= link_to "Read More", p, class:"right" %>
+        <%= content_tag :p, limit_length(p.body,125).html_safe %>
+        <%= link_to "Read More", p, class:"post-more right" %>
       <% end %>
       <% if admin_signed_in? %>
         <%= link_to "Edit Post", edit_post_path(p) %>
       <% end %>
       <hr />
-      <% end %>
+    <% end %>
   <% end %>
   <%= will_paginate(@posts) %>
 </div>

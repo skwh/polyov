@@ -3,7 +3,7 @@
   <%= content_tag :h1, @post.title, class:"post-title centered" %>
   <%= content_tag :h3, @post.updated_at.strftime('%b %e %Y'), class:"post-time centered" %>
   <%= content_tag :div, class:"post-body" do %>
-    <%= @post.body.html_safe %>
+    <%= content_tag :p, @post.body.html_safe %>
   <% end %>
   <% if admin_signed_in? %>
     <%= link_to "Edit Post", edit_post_path(@post) %>

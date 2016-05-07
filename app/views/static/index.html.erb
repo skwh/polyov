@@ -3,12 +3,12 @@
     <%= content_tag :h1, class:"project-title" do %>
       <%= link_to p.title, p %>
     <% end %>
-    <%= content_tag :h3, class:"project-subtitle" do %>
+    <%= content_tag :h3, class:"project-subtitle no-hover-box" do %>
       <%= p.subtitle %>
     <% end %>
   <% end %>
 <% end %>
+<%= will_paginate @projects %>
 <% if admin_signed_in? %>
   <%= link_to "New Project", new_project_path %>
 <% end %>
-<%= will_paginate @projects %>
