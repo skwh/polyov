@@ -2,7 +2,7 @@ Rails.application.routes.draw do
 
   devise_for :admins
 
-  resources :projects, path: "portfolio"
+  resources :projects, path: "portfolio", :except => [ :index ]
 
   resources :posts, path: "blog"
   # The priority is based upon order of creation: first created -> highest priority.

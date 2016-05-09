@@ -30,11 +30,18 @@ h1 {
   font-family: "Prototype", sans-serif;
 }
 
+.projects-wrapper {
+  width:98%;
+  margin:auto;
+}
+
 .project-box {
+  cursor:pointer;
   text-align: center;
-  width:42%;
+  width:43%;
   padding:2%;
-  float:left;
+  // float:left;
+  display:inline-block;
   background-color:rgba(209, 209, 209, 0.2);
   margin:1%;
   // border-left:3px solid $mainblue;

@@ -77,9 +77,14 @@ input {
   float:right;
 }
 
+.pagination-wrapper {
+  width:50%;
+  margin:auto;
+  text-align: center;
+}
+
 .pagination {
   clear:both;
-  text-align: center;
   margin-top:3%;
   * {
     padding:1%;
@@ -118,7 +123,7 @@ input {
     padding:1%;
     text-transform: uppercase;
     color:$mainblue;
-    font-family: "Avenir", "Prototype", sans-serif;
+    font-family: "Futura", "Prototype", sans-serif;
     display:inline-block;
     border-radius:2px;
     transition: background-color 0.5s;

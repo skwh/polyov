@@ -15,3 +15,14 @@
 //= require tinymce-jquery
 //= require turbolinks
 //= require_tree .
+
+var loaded = function() {
+  $('.project-box').click(function(e) {
+		if (e.target.localName != "a") {
+			window.location.href = "/portfolio/" + $(this).attr("data-project-slug");
+		}
+	});
+};
+
+$(document).ready(loaded);
+$(document).on("page:load",loaded);

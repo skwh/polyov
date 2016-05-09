@@ -1,14 +1,16 @@
-<% @projects.each do |p| %>
-  <%= content_tag :div, class:"project-box" do %>
-    <%= content_tag :h1, class:"project-title" do %>
-      <%= link_to p.title, p %>
-    <% end %>
-    <%= content_tag :h3, class:"project-subtitle no-hover-box" do %>
-      <%= p.subtitle %>
+<%= content_tag :div, class:"projects-wrapper" do %>
+  <% @projects.each do |p| %>
+    <%= content_tag :div, class:"project-box", data:{"project-slug":p.slug} do %>
+      <%= content_tag :h1, class:"project-title" do %>
+        <%= link_to p.title, p %>
+      <% end %>
+      <%= content_tag :h3, class:"project-subtitle no-hover-box" do %>
+        <%= p.subtitle %>
+      <% end %>
     <% end %>
   <% end %>
 <% end %>
-<%= will_paginate @projects %>
+<%= content_tag :div, will_paginate(@projects), class:"pagination-wrapper" %>
 <% if admin_signed_in? %>
   <%= link_to "New Project", new_project_path %>
 <% end %>
