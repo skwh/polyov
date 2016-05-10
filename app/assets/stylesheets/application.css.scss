@@ -16,7 +16,9 @@
 
 $backgrey:rgb(237, 237, 237);
 
-$highlightgrey:rgba(209, 209, 209, 0.8);
+$highlightgrey:rgba(209, 209, 209, 0.4);
+
+$darkgrey:rgb(129, 129, 130);
 
 $greyblue:#2e486e;
 
@@ -35,6 +37,25 @@ $mainblue:#0047AB;
 @font-face {
   font-family:Kozuka;
   src:asset-url("Kozuka_Gothic_Pro_L.otf");
+}
+
+body {
+  margin:3%;
+  padding:0;
+  // background-color:$backgrey;
+  color:black;
+  font-family:sans-serif;
+}
+
+a {
+  color:$darkgrey;
+  text-decoration: none;
+  font-weight:bold;
+}
+
+h1 {
+  color:$mainblue;
+  font-family: "Prototype", sans-serif;
 }
 
 p {

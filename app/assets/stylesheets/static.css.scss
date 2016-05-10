@@ -9,26 +9,7 @@ $greyblue:#2e486e;
 
 $mainblue:#0047AB;
 
-$highlightgrey:rgba(209, 209, 209, 0.8);
-
-body {
-  margin:3%;
-  padding:0;
-  background-color:$backgrey;
-  color:black;
-  font-family:sans-serif;
-}
-
-a {
-  color:$darkgrey;
-  text-decoration: none;
-  font-weight:bold;
-}
-
-h1 {
-  color:$mainblue;
-  font-family: "Prototype", sans-serif;
-}
+$highlightgrey:rgba(209, 209, 209, 0.4);
 
 .projects-wrapper {
   width:98%;
@@ -42,7 +23,7 @@ h1 {
   padding:2%;
   // float:left;
   display:inline-block;
-  background-color:rgba(209, 209, 209, 0.2);
+  background-color:rgba(209, 209, 209, 0.1);
   margin:1%;
   // border-left:3px solid $mainblue;
   transition: background-color 0.5s, border-color 0.2s;

@@ -11,7 +11,7 @@ module ApplicationHelper
 		{
 			title: "Polyov",
 			description: "Web & UI Design, Development",
-			keywords: "Web Design, Web Development, UX Design, UI Design, Ruby on Rails, Ruby, Javascript",
+			keywords: "Web Design, Web Development, UX Design, UI Design, Ruby on Rails, Ruby, Javascript, portfolio, opportunities, work hard, designer, front-end, developper, ui, ux, motion, student, interaction, port, folio, book, web, freelance, interactive, media, designer, opportunities",
 			separator: ","
 		}
 	end
