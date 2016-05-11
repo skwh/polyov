@@ -3,7 +3,7 @@ module ApplicationHelper
     if title.blank?
       "Polyov"
     else
-      "Polyov | #{title}"
+      "Polyov | #{title}".html_safe
     end
   end
 
