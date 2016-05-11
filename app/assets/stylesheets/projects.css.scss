@@ -19,7 +19,7 @@ $subtitlegrey:rgb(66, 66, 66);
 }
 
 .project-title {
-  font-family:"Prototype", "Helvetica", sans-serif;
+  font-family:"Continuum", "Helvetica", sans-serif;
   margin-bottom:0.5vh;
 }
 
@@ -28,7 +28,7 @@ h2.project-subtitle {
   padding:1%;
   text-transform: uppercase;
   // color:$mainblue;
-  font-family:"Avenir", "Prototype", sans-serif;
+  font-family:"Avenir", "ContinuumBold", sans-serif;
   display:inline-block;
   border-radius:2px;
   transition: background-color 0.5s;
@@ -45,7 +45,7 @@ h3.project-subtitle {
   padding:1%;
   text-transform: uppercase;
   color:$greyblue;
-  font-family: "Avenir", "Prototype", sans-serif;
+  font-family: "Avenir", "ContinuumBold", sans-serif;
   display:inline-block;
   border-radius:2px;
   transition: background-color 0.5s;

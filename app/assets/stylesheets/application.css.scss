@@ -39,6 +39,16 @@ $mainblue:#0047AB;
   src:asset-url("Kozuka_Gothic_Pro_L.otf");
 }
 
+@font-face {
+  font-family:ContinuumBold;
+  src:asset-url("contb.ttf");
+}
+
+@font-face {
+  font-family:Continuum;
+  src:asset-url("contm.ttf");
+}
+
 body {
   margin:3%;
   padding:0;
