@@ -1,0 +1,55 @@
+/* CSS Document */
+body {
+	background-color:#000;
+	font-family:"Courier New", Courier, monospace;
+	color:#EFFFFF;
+	text-align:center;
+}
+#main {
+	width:575px;
+	height:575px;
+	border: 2px solid #FFFFFF;
+	padding:0;
+	margin:auto;	
+}
+#canvas {
+	width:500px;
+	height:500px;
+	border:1px solid #FFFFFF;
+	position:relative;
+	top:35px;
+	left:35px;	
+}
+#theCanvas {
+	background-image:url(../bg2.jpg);	
+}
+.hidden {
+	display:none;
+}
+/*#achivements {
+	border:3px solid #00FF00;
+	width:300px;
+	height:100px;
+	overflow:hidden;
+	float:left;
+	position:absolute;
+	top:100px;
+	left:15px;
+	background-color:#001;	
+}
+.ach {
+	border:1px solid #FFFFFF;
+	width:280px;
+	margin:auto;
+	text-align:center;
+	border-radius:25px;
+	height:95px;	
+	overflow:hidden;
+}
+h4.ach_title {
+	font-size:13pt;
+	padding:0;	
+}
+p.ach_descr {
+	font-size:9pt;
+}*/

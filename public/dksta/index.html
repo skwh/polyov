@@ -1,0 +1,58 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+	    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <script type="text/javascript" src="nodeGraph.js"></script>
+        <script type="text/javascript" src="algorithm.js"></script>
+        <script type="text/javascript" src="example.js"></script>
+	    <title>Maps</title>
+    </head>
+    <body>
+        <div id="main" style="text-align:center;font-family:Arial, Helvetica, sans-serif;width:auto;margin:auto;">
+        	<h1 style="text-shadow:black 1 -1px;font-size:26pt;background-color:#EEEEEE">Dijkstra's Algorithm</h1>
+            <canvas id="theCanvas" width="600" height="500" style="border:1px solid black">
+            	Your browser does not support the canvas element.
+            </canvas><br />
+            Use Map:
+            <select id="s3">
+            	<option value="graph1" selected>Map 1</option>
+                <option value="graph2">Map 2</option>
+                <option value="graph3">Map 3</option>
+            </select>
+            <button onclick="runMe()">Show Graph</button>
+            <button onclick="pathMe()">Show Path between:</button><br />
+			<select id="s1">
+            	<option value="1" selected>Node 1</option>
+                <option value="2">Node 2</option>
+                <option value="3">Node 3</option>
+                <option value="4">Node 4</option>
+                <option value="5">Node 5</option>
+                <option value="6">Node 6</option>
+            </select>
+            and
+            <select id="s2">
+            	<option value="1">Node 1</option>
+                <option value="2">Node 2</option>
+                <option value="3">Node 3</option>
+                <option value="4">Node 4</option>
+                <option value="5" selected>Node 5</option>
+                <option value="6">Node 6</option>
+            </select>
+        </div>
+        <script type="text/javascript">
+        document.getElementById('s3').addEventListener('change',(function(event) {
+			var element = event.srcElement;
+			var selectedMap = window[element.value];
+			selectedMap.setUp();
+			var nodeLength = selectedMap.nodes.length;
+			document.getElementById('s1').innerHTML = "";
+			document.getElementById('s2').innerHTML = "";
+			for (var i=0;i<nodeLength;i++) {
+				var number = selectedMap.nodes[i].n;
+				document.getElementById('s1').innerHTML += "<option value='" + number + "'> Node " + number + "</option>";
+				document.getElementById('s2').innerHTML += "<option value='" + number + "'> Node " + number + "</option>";
+			}
+		}),false);
+        </script>
+    </body>
+</html>
