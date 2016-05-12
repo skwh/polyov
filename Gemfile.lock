@@ -53,6 +53,10 @@ GEM
     forgery (0.6.0)
     hike (1.2.3)
     i18n (0.7.0)
+    inline_svg (0.7.0)
+      activesupport (>= 4.0.4)
+      loofah (>= 2.0)
+      nokogiri (~> 1.6)
     jbuilder (2.4.1)
       activesupport (>= 3.0.0, < 5.1)
       multi_json (~> 1.2)
@@ -60,6 +64,8 @@ GEM
       railties (>= 3.0, < 5.0)
       thor (>= 0.14, < 2.0)
     json (1.8.3)
+    loofah (2.0.3)
+      nokogiri (>= 1.5.9)
     mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
@@ -67,9 +73,12 @@ GEM
       actionpack (>= 3.0.0)
     method_source (0.8.2)
     mime-types (1.25.1)
+    mini_portile2 (2.0.0)
     minitest (5.8.4)
     multi_json (1.11.2)
     newrelic_rpm (3.15.1.316)
+    nokogiri (1.6.7.2)
+      mini_portile2 (~> 2.0.0.rc2)
     orm_adapter (0.5.0)
     pg (0.17.1)
     polyglot (0.3.5)
@@ -152,6 +161,7 @@ DEPENDENCIES
   devise
   dotenv-rails
   forgery (= 0.6.0)
+  inline_svg
   jbuilder (~> 2.0)
   jquery-rails
   meta-tags

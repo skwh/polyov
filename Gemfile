@@ -34,6 +34,7 @@ gem 'redcarpet'
 gem 'will_paginate', '~> 3.0.6'
 gem 'meta-tags'
 gem 'tinymce-rails'
+gem 'inline_svg'
 
 group :production do
 	gem 'pg', '0.17.1'

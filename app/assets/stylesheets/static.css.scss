@@ -1,15 +1,13 @@
 // Place all the styles related to the static controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-$backgrey:rgb(237, 237, 237);
 
-$darkgrey:rgb(129, 129, 130);
+@import 'variables';
 
-$greyblue:#2e486e;
-
-$mainblue:#0047AB;
-
-$highlightgrey:rgba(209, 209, 209, 0.4);
+h2, h3, h4 {
+  font-family:"Couture", "DIN Condensed", sans-serif;
+  color:$greyblue;
+}
 
 .projects-wrapper {
   width:98%;
@@ -38,6 +36,7 @@ $highlightgrey:rgba(209, 209, 209, 0.4);
   text-transform: capitalize;
   a {
     color:$mainblue;
+    transition: color 0.5s;
     &:hover {
       color:$greyblue;
     }
@@ -52,8 +51,6 @@ $highlightgrey:rgba(209, 209, 209, 0.4);
 }
 
 .static-subheader {
-  font-family:"Couture", "DIN Condensed", sans-serif;
-  color:$darkgrey;
   margin-top:1%;
 }
 
@@ -62,8 +59,6 @@ $highlightgrey:rgba(209, 209, 209, 0.4);
 }
 
 .static-subsubheader {
-  font-family:"Couture", "DIN Condensed", sans-serif;
-  color:$darkgrey;
   margin-bottom:0;
 }
 

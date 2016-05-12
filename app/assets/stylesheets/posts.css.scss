@@ -2,14 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-$backgrey:rgb(237, 237, 237);
-
-$darkgrey:rgb(129, 129, 130);
-
-$mainblue:#0047AB;
-
-$highlightgrey:rgba(209, 209, 209, 0.4);
-
+@import 'variables';
 
 #body-wrapper {
   width:75%;

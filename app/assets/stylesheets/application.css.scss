@@ -14,15 +14,7 @@
  *= require_self
  */
 
-$backgrey:rgb(237, 237, 237);
-
-$highlightgrey:rgba(209, 209, 209, 0.4);
-
-$darkgrey:rgb(129, 129, 130);
-
-$greyblue:#2e486e;
-
-$mainblue:#0047AB;
+@import 'variables';
 
 @font-face {
   font-family:Couture;
@@ -71,11 +63,6 @@ h1 {
 p {
   font-family:"Kozuka Gothic Pro", "Kozuka", "Optima", sans-serif;
   // font-weight:bold;
-}
-
-img#header-image {
-  transition: width 1s;
-  -webkit-transition: width 1s;
 }
 
 img.large {
@@ -146,6 +133,19 @@ input {
 #header {
   text-align:center;
   margin-bottom:1%;
+}
+
+#header-image {
+  width:56%;
+  height:56%;
+  g path {
+    transition: fill 0.2s;
+    fill: $mainblue;
+
+    &:hover {
+      fill:rgb(120, 23, 56);
+    }
+  }
 }
 
 #nav {
