@@ -6,11 +6,6 @@ class ProjectsController < ApplicationController
 
   respond_to :html
 
-  def index
-    @projects = Project.all.order(created_at: :desc).paginate(:page => params[:page], :per_page => 6)
-    respond_with(@projects)
-  end
-
   def show
     set_meta_tags title: @project.title,
                   description: limit_length(@project.description,50).html_safe,
