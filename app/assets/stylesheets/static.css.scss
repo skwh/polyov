@@ -21,14 +21,13 @@ h2, h3, h4 {
   padding:2%;
   // float:left;
   display:inline-block;
-  background-color:rgba(209, 209, 209, 0.1);
   margin:1%;
   // border-left:3px solid $mainblue;
   transition: background-color 0.5s, border-color 0.2s;
-  border: 3px solid rgba(255, 255, 255, 0);
+  // border: 3px solid rgba(255, 255, 255, 0);
   &:hover {
     background-color:$highlightgrey;
-    border-left: 3px solid $mainblue;
+    // border-left: 3px solid $mainblue;
   }
 }
 
