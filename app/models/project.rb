@@ -1,5 +1,6 @@
 class Project < ActiveRecord::Base
   before_save :create_slug
+  scope :visible, -> { where(hidden:false) }
 
   def create_slug
     self.slug = title.parameterize

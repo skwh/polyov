@@ -12,7 +12,7 @@
   <%= render 'layouts/header' %>
   <%= yield %>
   <% if admin_signed_in? %>
-    Signed in
+    -<%= link_to "Signed in", destroy_admin_session_path %>-
   <% end %>
 </body>
 </html>

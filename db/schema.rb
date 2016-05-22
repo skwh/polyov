@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160505210136) do
+ActiveRecord::Schema.define(version: 20160515202536) do
 
   create_table "admins", force: true do |t|
     t.string   "email",               default: "", null: false
@@ -39,6 +39,7 @@ ActiveRecord::Schema.define(version: 20160505210136) do
     t.datetime "updated_at"
     t.string   "site_url"
     t.string   "slug"
+    t.boolean  "hidden",      default: false, null: false
   end
 
 end
