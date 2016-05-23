@@ -3,6 +3,7 @@ include ApplicationHelper
 class ProjectsController < ApplicationController
   before_action :set_project, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_admin!, only: [:edit, :update, :destroy, :new, :create]
+  before_action :check_visible, only: [:show]
 
   respond_to :html
 
@@ -41,6 +42,12 @@ class ProjectsController < ApplicationController
   private
     def set_project
       @project = Project.find_by_param(params[:id])
+    end
+
+    def check_visible
+      if @project.hidden?
+        not_found
+      end
     end
 
     def project_params
