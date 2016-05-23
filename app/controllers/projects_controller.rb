@@ -45,7 +45,7 @@ class ProjectsController < ApplicationController
     end
 
     def check_visible
-      if @project.hidden?
+      if @project.hidden? and !admin_signed_in?
         not_found
       end
     end
