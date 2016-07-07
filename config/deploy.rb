@@ -10,6 +10,8 @@ set :repo_url, 'http://github.com/skwh/polyov.git'
 # Default deploy_to directory is /var/www/my_app_name
 set :deploy_to, '/var/www/polyov'
 
+set :rvm_ruby_version, '2.3.0'
+
 # Default value for :scm is :git
 # set :scm, :git
 

@@ -47,6 +47,9 @@ GEM
     capistrano-rails (1.1.7)
       capistrano (~> 3.1)
       capistrano-bundler (~> 1.1)
+    capistrano-rvm (0.1.2)
+      capistrano (~> 3.0)
+      sshkit (~> 1.2)
     coderay (1.1.1)
     coffee-rails (4.1.1)
       coffee-script (>= 2.2.0)
@@ -186,6 +189,7 @@ DEPENDENCIES
   capistrano
   capistrano-passenger
   capistrano-rails
+  capistrano-rvm
   devise
   dotenv-rails
   forgery (= 0.6.0)

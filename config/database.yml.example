@@ -20,6 +20,11 @@ test:
   <<: *default
   database: db/test.sqlite3
 
+staging:
+  adapter: postgresql
+  pool: 5
+  database: polyov-staging
+
 production:
   adapter: postgresql
   pool: 5
