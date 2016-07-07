@@ -35,6 +35,7 @@ gem 'will_paginate', '~> 3.0.6'
 gem 'meta-tags'
 gem 'tinymce-rails'
 gem 'inline_svg'
+gem 'capistrano-passenger'
 
 group :production do
 	gem 'pg', '0.17.1'
@@ -46,10 +47,9 @@ group :development, :test do
 	gem 'pry'
 	gem 'sqlite3'
 	gem 'dotenv-rails'
+	gem 'capistrano'
+	gem 'capistrano-rails'
 end
-
-#Use Capistrano for deployment
-gem 'capistrano-rails', group: :development
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
