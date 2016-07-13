@@ -19,7 +19,7 @@
 h2.project-subtitle {
   padding:1%;
   text-transform: uppercase;
-  // color:$mainblue;
+  // color:$primarycolor;
   font-family:"Avenir", "ContinuumBold", sans-serif;
   display:inline-block;
   border-radius:2px;
@@ -53,7 +53,7 @@ h3.project-subtitle {
   margin:1%;
   line-height: 5vh;
   a {
-    color:$mainblue;
+    color:$primarycolor;
     &:hover {
       text-decoration: underline;
     }
@@ -61,4 +61,12 @@ h3.project-subtitle {
   p img {
     width:100%;
   }
+}
+
+.project-cover {
+  display:block;
+  margin:auto;
+  width:80%;
+  text-align: center;
+  border:1px solid $backgrey;
 }

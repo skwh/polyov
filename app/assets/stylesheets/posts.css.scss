@@ -13,7 +13,7 @@
 .post {
   margin-top:4%;
     a {
-      color:$mainblue;
+      color:$primarycolor;
       &:hover {
         text-decoration: underline;
       }
@@ -37,7 +37,7 @@ h1.post-title {
 }
 
 .post-link {
-  color:$mainblue;
+  color:$primarycolor;
   &:hover {
     text-decoration: underline;
   }

@@ -37,6 +37,7 @@ gem 'tinymce-rails'
 gem 'inline_svg'
 gem 'capistrano-passenger'
 gem 'capistrano-rvm'
+gem 'paperclip'
 
 group :production do
 	gem 'pg', '0.17.1'

@@ -5,7 +5,8 @@
     <%= link_to @project.subtitle, @project.site_url, target:"_blank" %>
   <% end %>
   <%= content_tag :div, class:"project-description" do %>
-    <%= @project.description.html_safe %>
+    <%= @project.description.html_safe %><br />
+    <%= image_tag @project.cover.url(:medium), class:"project-cover" %>
   <% end %>
 <% end %>
 <% if admin_signed_in? %>
