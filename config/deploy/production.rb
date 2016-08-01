@@ -17,7 +17,19 @@
 # property set. Specify the username and a domain or IP for the server.
 # Don't use `:all`, it's a meta role.
 
-# role :app, %w{deploy@example.com}, my_property: :my_value
+# Check if we are at home or abroad
+ip_address = ""
+Socket.ip_address_list.each do |i|
+  current_ip = i.ip_address
+  if !current_ip.contains(":") && !current_ip.contains("127") do
+    ip_address = current_ip
+  end
+end
+if ip_address == "10.0.0.39" do
+  role :web, %w{rserver@caesar.polyov.local:2602}
+else
+  role :web, %w{rserver@polyov.com:2602}
+end
 role :web, %w{rserver@polyov.com:2602}
 # role :db,  %w{deploy@example.com}
 
