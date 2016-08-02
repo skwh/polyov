@@ -21,16 +21,15 @@
 ip_address = ""
 Socket.ip_address_list.each do |i|
   current_ip = i.ip_address
-  if !current_ip.contains(":") && !current_ip.contains("127") do
+  if !current_ip.include?(":") && !current_ip.include?("127")
     ip_address = current_ip
   end
 end
-if ip_address == "10.0.0.39" do
+if ip_address == "10.0.0.39"
   role :web, %w{rserver@caesar.polyov.local:2602}
 else
   role :web, %w{rserver@polyov.com:2602}
 end
-role :web, %w{rserver@polyov.com:2602}
 # role :db,  %w{deploy@example.com}
 
 
