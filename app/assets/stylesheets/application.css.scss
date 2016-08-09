@@ -17,8 +17,24 @@
 @import 'variables';
 
 @font-face {
-  font-family:Couture;
-  src:asset-url("couture-bld.otf");
+  font-family:"Libre Baskerville";
+  src:asset-url("LibreBaskerville-Regular.ttf");
+}
+
+@font-face {
+  font-family:"Libre Baskerville";
+  src:asset-url("LibreBaskerville-Italic.ttf");
+  font-style: italic;
+}
+
+@font-face {
+  font-family:"Open Sans";
+  src:asset-url("OpenSans-Light.ttf");
+}
+
+@font-face {
+  font-family:"Playfair Display";
+  src:asset-url("PlayfairDisplay-Regular.ttf");
 }
 
 .dev {
@@ -46,7 +62,7 @@
 }
 
 body {
-  font-family:"Baskerville", serif;
+  font-family:"Libre Baskerville", "Baskerville", serif;
 }
 
 a {
@@ -60,14 +76,13 @@ a {
 }
 
 h1, h2, h3 {
-  // font-family:"Didot", "Optima", "Baskerville", serif;
-  font-family: "Optima", "Gill Sans", "Avenir", sans-serif;
+  font-family: "Open Sans", "Optima", "Gill Sans", "Avenir", sans-serif;
   font-size:2vw;
   font-weight: normal;
 }
 
  p {
-   font-size:1.3vw;
+   font-size:1vw;
  }
 
 #main-wrapper {
@@ -102,10 +117,10 @@ h1, h2, h3 {
   }
 
   ul {
-    font-size:1.6vw;
+    font-size:1.2vw;
     list-style-type: none;
     li {
-      padding:0.5%;
+      padding:1%;
     }
     li::before {
       content:" - "

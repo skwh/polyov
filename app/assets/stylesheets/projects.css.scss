@@ -5,7 +5,7 @@
 @import 'variables';
 
 .project-subtitle {
-  font-size:1.5vw;
+  font-size:1.1vw;
 }
 
 .project-cover {
@@ -16,21 +16,37 @@
   margin-top:1%;
 }
 
+a.dev-underline, a.des-underline, a.sys-underline {
+  transition: background-color 1s;
+}
+
 .dev-underline {
   border-bottom: 1px solid $dev;
+}
+
+a.dev-underline:hover {
+  background-color: $dev;
 }
 
 .des-underline {
   border-bottom: 1px solid $des;
 }
 
+a.des-underline:hover {
+  background-color: $des;
+}
+
 .sys-underline {
   border-bottom: 1px solid $sys;
 }
 
+a.sys-underline:hover {
+  background-color: $sys;
+}
+
 .project {
   .project-subtitle {
-    font-family:"Baskerville", serif;
+    font-family:"Libre Baskerville", "Baskerville", serif;
   }
 }
 
@@ -39,11 +55,15 @@
   // width:75%;
 
   .project-title {
-    font-family: "Didot", serif;
+    font-family: "Playfair Display", "Didot", serif;
   }
 
   .project-link {
+      padding:0.5%;
       font-style: normal;
+      &:hover {
+        color:black;
+      }
   }
 
   .project-cover {
