@@ -83,6 +83,7 @@ h1, h2, h3 {
 
  p {
    font-size:1vw;
+   line-height: 1.45em;
  }
 
 #main-wrapper {
@@ -93,8 +94,9 @@ h1, h2, h3 {
 
 #content-wrapper {
   float:right;
-  width:73%;
+  width:65%;
   margin-bottom:5%;
+  margin-right:6%;
 }
 
 #static-header {
