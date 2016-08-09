@@ -1,21 +1,15 @@
-<%= content_tag :div, class:"projects-wrapper" do %>
-  <% @projects.each do |p| %>
-    <%= content_tag :div, class:"project-box", data:{"project-slug":p.slug, "project-cover":p.cover} do %>
-      <%= content_tag :div, class:"project-text" do %>
-        <%= content_tag :h1, class:"project-title" do %>
-          <%= link_to p.title, p %>
-        <% end %>
-        <%= content_tag :h3, class:"project-subtitle no-hover-box" do %>
-          <%= p.subtitle %>
-        <% end %>
-      <% end %>
-      <% if !p.cover.url.empty? %>
-        <%= image_tag p.cover.url, class:"project-cover" %>
+<%= content_tag :div, id:"static-header" do %>
+  <%= render 'static_header' %>
+<% end %>
+<% @projects.each do |p| %>
+  <%= content_tag :div, class:"project-box" do %>
+    <!-- <%= image_tag p.cover.url, class:"project-cover" %> -->
+    <%= content_tag :h2, class:"project-title" do %>
+      - <%= link_to p.title, p, class:"project-link #{p.category}-underline" %>
+      <% if p.hidden? %>
+        hidden
       <% end %>
     <% end %>
   <% end %>
 <% end %>
 <%= content_tag :div, will_paginate(@projects), class:"pagination-wrapper" %>
-<% if admin_signed_in? %>
-  <%= link_to "New Project", new_project_path %>
-<% end %>

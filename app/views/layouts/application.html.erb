@@ -9,10 +9,11 @@
   <%= display_meta_tags(default_meta_tags) %>
 </head>
 <body>
-  <%= render 'layouts/header' %>
-  <%= yield %>
-  <% if admin_signed_in? %>
-    -<%= link_to "Signed in", destroy_admin_session_path %>-
+  <%= content_tag :div, id:"main-wrapper" do %>
+    <%= render 'layouts/sidebar' %>
+    <%= content_tag :div, id:"content-wrapper" do %>
+      <%= yield %>
+    <% end %>
   <% end %>
 </body>
 </html>

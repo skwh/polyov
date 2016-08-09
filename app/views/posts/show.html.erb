@@ -1,7 +1,11 @@
 <% provide(:title, @post.title) %>
 <div id="body-wrapper">
-  <%= content_tag :h1, @post.title, class:"post-title centered" %>
-  <%= content_tag :h3, @post.updated_at.strftime('%b %e %Y'), class:"post-time centered" %>
+  <%= content_tag :h2, class:"post-title" do %>
+    <%= @post.title %>
+    <%= content_tag :span, class:"post-time" do %>
+      - <%= @post.updated_at.strftime('%b %e %Y') %>
+    <% end %>
+  <% end %>
   <%= content_tag :div, class:"post-body" do %>
     <%= content_tag :p, @post.body.html_safe %>
   <% end %>

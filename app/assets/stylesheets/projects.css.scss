@@ -4,69 +4,59 @@
 
 @import 'variables';
 
-.project {
-  width:75%;
-  margin:auto;
-  text-align: center;
-}
-
-.project-title {
-  font-family:"Continuum", "Helvetica", sans-serif;
-  margin-bottom:0.5vh;
-}
-
-
-h2.project-subtitle {
-  padding:1%;
-  text-transform: uppercase;
-  // color:$primarycolor;
-  font-family:"Avenir", "ContinuumBold", sans-serif;
-  display:inline-block;
-  border-radius:2px;
-  transition: background-color 0.5s;
-  margin-bottom: 1%;
-  a {
-    color:$greyblue;
-  }
-  &:hover {
-    background-color:$highlightgrey;
-  }
-}
-
-h3.project-subtitle {
-  padding:1%;
-  text-transform: uppercase;
-  color:$greyblue;
-  font-family: "Avenir", "ContinuumBold", sans-serif;
-  display:inline-block;
-  border-radius:2px;
-  transition: background-color 0.5s;
-  margin-bottom: 1%;
-  margin-top: -1%;
-  a {
-    color:$greyblue;
-  }
-}
-
-
-.project-description {
-  margin:1%;
-  line-height: 5vh;
-  a {
-    color:$primarycolor;
-    &:hover {
-      text-decoration: underline;
-    }
-  }
-  p img {
-    width:100%;
-  }
+.project-subtitle {
+  font-size:1.5vw;
 }
 
 .project-cover {
-  display:block;
-  margin:auto;
-  width:80%;
-  text-align: center;
-  border:1px solid $backgrey;
+  width:75%;
+}
+
+.project-back {
+  margin-top:1%;
+}
+
+.dev-underline {
+  border-bottom: 1px solid $dev;
+}
+
+.des-underline {
+  border-bottom: 1px solid $des;
+}
+
+.sys-underline {
+  border-bottom: 1px solid $sys;
+}
+
+.project {
+  .project-subtitle {
+    font-family:"Baskerville", serif;
+  }
+}
+
+.project-box {
+  margin-left:2%;
+  // width:75%;
+
+  .project-title {
+    font-family: "Didot", serif;
+  }
+
+  .project-link {
+      font-style: normal;
+  }
+
+  .project-cover {
+    width:100%;
+    border:1px solid black;
+    border-radius:2px;
+    -webkit-transition: -webkit-filter 0.25s;
+    -webkit-filter: grayscale(100%);
+    filter:grayscale(100%);
+
+    &:hover {
+      -webkit-filter: grayscale(0%);
+      filter:grayscale(0%);
+    }
+  }
 }
