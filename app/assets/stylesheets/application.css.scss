@@ -137,14 +137,13 @@ h1, h2, h3 {
 
 #a-note {
   margin-top:5%;
-  h3, p {
+  h3 {
     display:inline;
     margin:0;
-  }
-  h3 {
     font-size:1.4vw;
   }
   p {
+    margin-top:3%;
     font-size: 1vw;
   }
 }
