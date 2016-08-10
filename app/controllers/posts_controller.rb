@@ -12,19 +12,29 @@ class PostsController < ApplicationController
   end
 
   def show
+    post_description = limit_length(ActionView::Base.full_sanitizer.sanitize(@post.body),50)
     set_meta_tags title: @post.title,
-                  description: limit_length(@post.body,50).html_safe,
+                  description: post_description,
                   author: "Evan Derby",
                   publisher: "Polyov",
                   og: {
                     title: @post.title,
                     type: "article",
                     site_name: "Polyov",
-                    description: limit_length(ActionView::Base.full_sanitizer.sanitize(@post.body),50),
+                    description: post_description,
                     url: "http://www.polyov.com/posts/#{@post.slug}"
                   },
                   article: {
-                    author: "Evan Derby"
+                    author: "Evan Derby",
+                    publisher:"Polyov Blog",
+                    section: "Blog"
+                  },
+                  twitter: {
+                    card: "summary",
+                    title: @post.title,
+                    description: post_description,
+                    site: "@polyov_dev",
+                    creator: "@polyov_dev"
                   }
     respond_with(@post)
   end
