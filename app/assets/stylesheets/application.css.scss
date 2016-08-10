@@ -28,6 +28,12 @@
 }
 
 @font-face {
+  font-family: "Libre Baskerville";
+  src:asset-url("LibreBaskerville-Bold.ttf");
+  font-weight:bold;
+}
+
+@font-face {
   font-family:"Open Sans";
   src:asset-url("OpenSans-Light.ttf");
 }
