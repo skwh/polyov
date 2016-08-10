@@ -25,7 +25,7 @@ a.dev-underline, a.des-underline, a.sys-underline {
 }
 
 a.dev-underline:hover {
-  background-color: $dev;
+  background-color: $devh;
 }
 
 .des-underline {
@@ -33,7 +33,7 @@ a.dev-underline:hover {
 }
 
 a.des-underline:hover {
-  background-color: $des;
+  background-color: $desh;
 }
 
 .sys-underline {
@@ -41,7 +41,7 @@ a.des-underline:hover {
 }
 
 a.sys-underline:hover {
-  background-color: $sys;
+  background-color: $sysh;
 }
 
 .project {
