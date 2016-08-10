@@ -12,7 +12,7 @@ set :deploy_to, '/var/www/polyov'
 set :rvm_ruby_version, '2.3.0'
 
 set :linked_files, fetch(:linked_files, []).push('config/database.yml', 'config/secrets.yml')
-set :linked_dirs, fetch(:linked_dirs, []).push('log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'vendor/bundle', 'public/system', 'public/uploads')
+set :linked_dirs, fetch(:linked_dirs, []).push('log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'vendor/bundle', 'public/system', 'public/uploads', 'public/documents')
 
 set :passenger_environment_variables, { :path => '/usr/local/rvm/gems/ruby-2.3.0/gems/passenger-5.0.29/bin:$PATH' }
 set :passenger_restart_command, '/usr/local/rvm/gems/ruby-2.3.0/gems/passenger-5.0.29/bin/passenger-config restart-app'
