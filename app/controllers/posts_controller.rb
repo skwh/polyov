@@ -20,7 +20,7 @@ class PostsController < ApplicationController
                     title: @post.title,
                     type: "article",
                     site_name: "Polyov",
-                    description: limit_length(@post.body,50).html_safe,
+                    description: limit_length(ActionView::Base.full_sanitizer.sanitize(@post.body),50),
                     url: "http://www.polyov.com/posts/#{@post.slug}"
                   },
                   article: {
