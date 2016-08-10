@@ -1,8 +1,5 @@
 <% provide(:title, "Blog") %>
 <div id="body-wrapper">
-  <% if admin_signed_in? %>
-    <%= link_to "New Post", new_post_path %>
-  <% end %>
   <% @posts.each do |p| %>
     <%= content_tag :div, class:"post" do %>
       <%= content_tag :h2, class:"post-title" do %>
@@ -13,7 +10,7 @@
       <% end %>
       <%= content_tag :div, class:"post-body" do %>
         <%= content_tag :p, limit_length(p.body,125).html_safe %>
-        <%= link_to "Read More", p, class:"post-more right" %>
+        <%= link_to "Read More", p, class:"post-more" %>
       <% end %>
       <% if admin_signed_in? %>
         <%= link_to "Edit Post", edit_post_path(p) %>

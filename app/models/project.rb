@@ -1,4 +1,7 @@
 class Project < ActiveRecord::Base
+  has_attached_file :cover, styles: { medium: "1000x1000>", small:"500x500>", thumb: "100x100>" }
+  validates_attachment_content_type :cover, :content_type => ["image/jpg", "image/jpeg", "image/png", "image/gif"]
+
   before_save :create_slug
   scope :visible, -> { where(hidden:false) }
 

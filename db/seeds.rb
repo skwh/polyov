@@ -5,8 +5,22 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+def get_category(index)
+  case index
+  when 1
+    "dev"
+  when 2
+    "des"
+  when 3
+    "sys"
+  else
+    "dev"
+  end
+end
+
 10.times do
-  Project.create(title:Forgery(:lorem_ipsum).words(rand(1..5)),subtitle:Forgery(:lorem_ipsum).words(5),description:Forgery(:lorem_ipsum).paragraphs(3),site_url:"http://example.com")
+  Project.create(title:Forgery(:lorem_ipsum).words(rand(1..5)),subtitle:Forgery(:lorem_ipsum).words(5),description:Forgery(:lorem_ipsum).paragraphs(3),site_url:"http://example.com",category:get_category(rand(1..3)))
 end
 
 20.times do

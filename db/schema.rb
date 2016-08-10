@@ -11,7 +11,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160515202536) do
+ActiveRecord::Schema.define(version: 20160809072937) do
+
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
 
   create_table "admins", force: true do |t|
     t.string   "email",               default: "", null: false
@@ -21,7 +24,7 @@ ActiveRecord::Schema.define(version: 20160515202536) do
     t.datetime "updated_at",                       null: false
   end
 
-  add_index "admins", ["email"], name: "index_admins_on_email", unique: true
+  add_index "admins", ["email"], name: "index_admins_on_email", unique: true, using: :btree
 
   create_table "posts", force: true do |t|
     t.string   "title"
@@ -39,7 +42,12 @@ ActiveRecord::Schema.define(version: 20160515202536) do
     t.datetime "updated_at"
     t.string   "site_url"
     t.string   "slug"
-    t.boolean  "hidden",      default: false, null: false
+    t.boolean  "hidden",             default: false, null: false
+    t.string   "cover_file_name"
+    t.string   "cover_content_type"
+    t.integer  "cover_file_size"
+    t.datetime "cover_updated_at"
+    t.string   "category",           default: "dev", null: false
   end
 
 end

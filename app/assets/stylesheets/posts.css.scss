@@ -4,72 +4,17 @@
 
 @import 'variables';
 
-#body-wrapper {
-  width:75%;
-  margin:auto;
-  padding-top:1%;
-}
-
-.post {
-  margin-top:4%;
-    a {
-      color:$mainblue;
-      &:hover {
-        text-decoration: underline;
-      }
-    }
-}
-
-.post hr {
-  clear:both;
-  margin-top:5%;
-  width:80%;
-}
-
-h1.post-title {
-  font-size:2vw;
-}
-
-.post-title {
-  margin-top:4%;
-  font-family:"Couture", "DIN Condensed", sans-serif;
-  font-size:100%;
-}
-
 .post-link {
-  color:$mainblue;
-  &:hover {
-    text-decoration: underline;
-  }
-}
-
-.post-more {
-  font-family:"Avenir", "Prototype", sans-serif;
-  display:inline-block;
-  transition: background-color 0.5s;
-  padding:1%;
-  line-height: normal;
-  border-radius:2px;
-  margin-top:2%;
-  margin-bottom:2%;
-  text-transform:uppercase;
-  &:hover {
-    background-color:$highlightgrey;
-    text-decoration: none !important;
-  }
-}
-
-h3.post-time {
-  font-family:"Couture", "DIN Condensed", sans-serif;
-  margin-top:1%;
-  font-size:1.2vw;
+  font-style: normal;
 }
 
 .post-time {
-  font-size:80%;
-  color:$darkgrey;
+  font-size:1.3vw;
 }
 
-.post-body {
-  margin:1%;
+.post-more {
+  text-align: right;
+  display:block;
+  font-size:1vw;
+  margin:5% 0;
 }

@@ -4,61 +4,79 @@
 
 @import 'variables';
 
-.project {
+.project-subtitle {
+  font-size:1.1vw;
+}
+
+.project-cover {
   width:75%;
-  margin:auto;
-  text-align: center;
 }
 
-.project-title {
-  font-family:"Continuum", "Helvetica", sans-serif;
-  margin-bottom:0.5vh;
+.project-back {
+  margin-top:1%;
 }
 
-
-h2.project-subtitle {
-  padding:1%;
-  text-transform: uppercase;
-  // color:$mainblue;
-  font-family:"Avenir", "ContinuumBold", sans-serif;
-  display:inline-block;
-  border-radius:2px;
-  transition: background-color 0.5s;
-  margin-bottom: 1%;
-  a {
-    color:$greyblue;
-  }
-  &:hover {
-    background-color:$highlightgrey;
-  }
+a.dev-underline, a.des-underline, a.sys-underline {
+  transition: background-color 1s;
 }
 
-h3.project-subtitle {
-  padding:1%;
-  text-transform: uppercase;
-  color:$greyblue;
-  font-family: "Avenir", "ContinuumBold", sans-serif;
-  display:inline-block;
-  border-radius:2px;
-  transition: background-color 0.5s;
-  margin-bottom: 1%;
-  margin-top: -1%;
-  a {
-    color:$greyblue;
+.dev-underline {
+  border-bottom: 1px solid $dev;
+}
+
+a.dev-underline:hover {
+  background-color: $devh;
+}
+
+.des-underline {
+  border-bottom: 1px solid $des;
+}
+
+a.des-underline:hover {
+  background-color: $desh;
+}
+
+.sys-underline {
+  border-bottom: 1px solid $sys;
+}
+
+a.sys-underline:hover {
+  background-color: $sysh;
+}
+
+.project {
+  .project-subtitle {
+    font-family:"Libre Baskerville", "Baskerville", serif;
   }
 }
 
+.project-box {
+  margin-left:2%;
+  // width:75%;
 
-.project-description {
-  margin:1%;
-  line-height: 5vh;
-  a {
-    color:$mainblue;
-    &:hover {
-      text-decoration: underline;
-    }
+  .project-title {
+    font-family: "Playfair Display", "Didot", serif;
   }
-  p img {
+
+  .project-link {
+      padding:0.5%;
+      font-style: normal;
+      &:hover {
+        color:black;
+      }
+  }
+
+  .project-cover {
     width:100%;
+    border:1px solid black;
+    border-radius:2px;
+    -webkit-transition: -webkit-filter 0.25s;
+    -webkit-filter: grayscale(100%);
+    filter:grayscale(100%);
+
+    &:hover {
+      -webkit-filter: grayscale(0%);
+      filter:grayscale(0%);
+    }
   }
 }

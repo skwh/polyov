@@ -1,13 +1,18 @@
 <% provide(:title, @project.title) %>
 <%= content_tag :div, class:"project" do %>
-  <%= content_tag :h1, @project.title, class:"project-title" %>
-  <%= content_tag :h2, class:"project-subtitle" do %>
-    <%= link_to @project.subtitle, @project.site_url, target:"_blank" %>
+  <%= content_tag :h1, class:"project-title #{@project.category}-underline" do %>
+  <%= @project.title %> -
+    <%= content_tag :span, class:"project-subtitle" do %>
+      <%= link_to @project.subtitle, @project.site_url, target:"_blank" %>
+    <% end %>
+  <% end %>
+  <% if admin_signed_in? %>
+    <%= link_to "Edit Project", edit_project_path(@project) %>,
+    <%= link_to 'Delete Project', project_path(@project), method: :delete, data: { confirm: 'Are you sure?' } %>
   <% end %>
   <%= content_tag :div, class:"project-description" do %>
-    <%= @project.description.html_safe %>
+    <%= @project.description.html_safe %><br />
+    <%= image_tag @project.cover.url(:medium), class:"project-cover" %>
   <% end %>
 <% end %>
-<% if admin_signed_in? %>
-  <%= link_to "Edit Project", edit_project_path(@project) %>
-<% end %>
+<%= link_to "Back", :root, class:"project-back right" %>
