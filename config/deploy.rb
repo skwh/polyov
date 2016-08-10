@@ -49,7 +49,7 @@ namespace :deploy do
       # Here we can do anything such as:
       within release_path do
          #execute "RAILS_ENV=production bundle exec rake db:migrate"
-         execute "passenger-config restart-app $(pwd)"
+         #execute "bundle exec passenger-config restart-app $(pwd)"
        end
     end
   end

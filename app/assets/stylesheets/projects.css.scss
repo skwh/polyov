@@ -44,6 +44,13 @@ a.sys-underline:hover {
   background-color: $sysh;
 }
 
+.sys-hover {
+  transition: background-color 1s;
+  &:hover {
+    background-color:$sysh;
+  }
+}
+
 .project {
   .project-subtitle {
     font-family:"Libre Baskerville", "Baskerville", serif;
@@ -56,6 +63,7 @@ a.sys-underline:hover {
 
   .project-title {
     font-family: "Playfair Display", "Didot", serif;
+    font-size:1.7vw;
   }
 
   .project-link {
