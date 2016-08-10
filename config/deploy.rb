@@ -48,7 +48,10 @@ namespace :deploy do
     on roles(:web), in: :groups, limit: 3, wait: 10 do
       # Here we can do anything such as:
       within release_path do
-         execute "RAILS_ENV=production bundle exec rake db:migrate"
+         #execute "RAILS_ENV=production bundle exec rake db:migrate"
+         execute "sudo kill $(sudo cat /home/rserver/nginx/logs/nginx.pid)"
+         sleep(5)
+         execute "sudo /home/rserver/nginx/sbin/nginx"
        end
     end
   end
