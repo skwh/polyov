@@ -49,9 +49,7 @@ namespace :deploy do
       # Here we can do anything such as:
       within release_path do
          #execute "RAILS_ENV=production bundle exec rake db:migrate"
-         execute "sudo kill $(sudo cat /home/rserver/nginx/logs/nginx.pid)"
-         sleep(5)
-         execute "sudo /home/rserver/nginx/sbin/nginx"
+         execute "passenger-config restart-app $(pwd)"
        end
     end
   end
