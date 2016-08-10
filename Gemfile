@@ -38,6 +38,8 @@ gem 'inline_svg'
 gem 'capistrano-passenger'
 gem 'capistrano-rvm'
 gem 'paperclip'
+gem 'capistrano'
+gem 'capistrano-rails'
 
 group :production do
 	gem 'pg', '0.17.1'
@@ -48,8 +50,6 @@ group :development, :test do
 	gem 'pry'
 	gem 'sqlite3'
 	gem 'dotenv-rails'
-	gem 'capistrano'
-	gem 'capistrano-rails'
 end
 
 # Use debugger
