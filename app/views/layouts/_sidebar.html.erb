@@ -6,16 +6,16 @@
     <%= content_tag :ul, id:"nav-links" do %>
       <li><%= link_to "Projects", root_path, class:current_tab("projects", "index", true) %></li>
       <li><%= link_to "Blog", posts_path, class:current_tab("posts", "index", true) %></li>
-      <li><%= link_to "Resume", "../documents/resume.pdf" %></li>
+      <li><%= link_to "Resume", "../documents/resume.pdf", :target => :_blank %></li>
     <% end %>
   </div>
   <div id="contact">
     <%= content_tag :h3, "Contact me:" %>
     <%= content_tag :ul, id:"contact-links" do %>
-      <li><%= link_to "Email", "mailto:somekidwithhtml@gmail.com" %></li>
-      <li><%= link_to "Twitter", "http://twitter.com/polyov_dev" %></li>
-      <li><%= link_to "Github", "http://github.com/skwh" %></li>
-      <li><%= link_to "Stack Overflow", "http://stackoverflow.com/users/1473963/polyov" %></li>
+      <li><%= link_to "Email", "mailto:somekidwithhtml@gmail.com", :target => :_blank %></li>
+      <li><%= link_to "Twitter", "http://twitter.com/polyov_dev", :target => :_blank %></li>
+      <li><%= link_to "Github", "http://github.com/skwh", :target => :_blank %></li>
+      <li><%= link_to "Stack Overflow", "http://stackoverflow.com/users/1473963/polyov", :target => :_blank %></li>
     <% end %>
   </div>
   <div id="a-note">
