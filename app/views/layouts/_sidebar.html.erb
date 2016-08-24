@@ -18,12 +18,6 @@
       <li><%= link_to "Stack Overflow", "http://stackoverflow.com/users/1473963/polyov", :target => :_blank %></li>
     <% end %>
   </div>
-  <div id="a-note">
-    <%= content_tag :h3, "A note", class:"sys-underline sys-hover" %>
-    <%= content_tag :p do %>
-      Self-hosted on a Dell Inspiron running Passenger Phusion, Nginx, Postgresql, and Arch Linux.
-    <% end %>
-  </div>
   <% if admin_signed_in? %>
     <%= content_tag :div, id:"admin-links" do %>
       -<%= link_to "Signed in", destroy_admin_session_path, method: :delete %>-<br />
