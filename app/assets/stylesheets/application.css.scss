@@ -19,33 +19,38 @@
 @font-face {
   font-family:"Libre Baskerville";
   src:asset-url("LibreBaskerville-Regular.ttf") format("truetype"),
-      asset-url("LibreBaskerville-Regular.woff") format("woff");
+      asset-url("LibreBaskerville-Regular.woff") format("woff"),
+      asset-url("LibreBaskerville-Regular.woff2") format("woff2");
 }
 
 @font-face {
   font-family:"Libre Baskerville";
   src:asset-url("LibreBaskerville-Italic.ttf") format("truetype"),
-      asset-url("LibreBaskerville-Italic.woff") format("woff");
+      asset-url("LibreBaskerville-Italic.woff") format("woff"),
+      asset-url("LibreBaskerville-Italic.woff2") format("woff2");
   font-style: italic;
 }
 
 @font-face {
   font-family: "Libre Baskerville";
   src:asset-url("LibreBaskerville-Bold.ttf") format("truetype"),
-      asset-url("LibreBaskerville-Bold.woff") format("woff");
+      asset-url("LibreBaskerville-Bold.woff") format("woff"),
+      asset-url("LibreBaskerville-Bold.woff2") format("woff2");
   font-weight:bold;
 }
 
 @font-face {
   font-family:"Open Sans";
   src:asset-url("OpenSans-Light.ttf") format("truetype"),
-      asset-url("OpenSans-Light.woff") format("woff");
+      asset-url("OpenSans-Light.woff") format("woff"),
+      asset-url("OpenSans-Light.woff2") format("woff2");
 }
 
 @font-face {
   font-family:"Playfair Display";
   src:asset-url("PlayfairDisplay-Regular.ttf") format("truetype"),
-      asset-url("PlayFairDisplay-Regular.woff") format("woff");
+      asset-url("PlayfairDisplay-Regular.woff") format("woff"),
+      asset-url("PlayfairDisplay-Regular.woff2") format("woff2");
 }
 
 .dev {
