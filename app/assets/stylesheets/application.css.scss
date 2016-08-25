@@ -18,29 +18,34 @@
 
 @font-face {
   font-family:"Libre Baskerville";
-  src:asset-url("LibreBaskerville-Regular.ttf");
+  src:asset-url("LibreBaskerville-Regular.ttf") format("truetype"),
+      asset-url("LibreBaskerville-Regular.woff") format("woff");
 }
 
 @font-face {
   font-family:"Libre Baskerville";
-  src:asset-url("LibreBaskerville-Italic.ttf");
+  src:asset-url("LibreBaskerville-Italic.ttf") format("truetype"),
+      asset-url("LibreBaskerville-Italic.woff") format("woff");
   font-style: italic;
 }
 
 @font-face {
   font-family: "Libre Baskerville";
-  src:asset-url("LibreBaskerville-Bold.ttf");
+  src:asset-url("LibreBaskerville-Bold.ttf") format("truetype"),
+      asset-url("LibreBaskerville-Bold.woff") format("woff");
   font-weight:bold;
 }
 
 @font-face {
   font-family:"Open Sans";
-  src:asset-url("OpenSans-Light.ttf");
+  src:asset-url("OpenSans-Light.ttf") format("truetype"),
+      asset-url("OpenSans-Light.woff") format("woff");
 }
 
 @font-face {
   font-family:"Playfair Display";
-  src:asset-url("PlayfairDisplay-Regular.ttf");
+  src:asset-url("PlayfairDisplay-Regular.ttf") format("truetype"),
+      asset-url("PlayFairDisplay-Regular.woff") format("woff");
 }
 
 .dev {
