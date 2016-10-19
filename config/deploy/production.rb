@@ -26,7 +26,7 @@ Socket.ip_address_list.each do |i|
   end
 end
 if ip_address == "10.0.0.39"
-  role :web, %w{rserver@caesar.polyov.local:2602}
+  role :web, %w{rserver@10.0.0.44:2602}
 else
   role :web, %w{rserver@polyov.com:2602}
 end
